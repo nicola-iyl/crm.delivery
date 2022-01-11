@@ -6,6 +6,9 @@ import { Provider as MessageProvider } from "./context/MessageContext";
 
 import PrivateRoute from "./router/PrivateRoute";
 import PublicRoute from "./router/PublicRoute";
+import Login from "./pages/Login";
+import Dashboard from "./pages/Dashboard";
+import Account from "./pages/Account";
 
 function App() {
   
@@ -15,7 +18,10 @@ function App() {
         <MessageProvider>
           <BrowserRouter>
             <Routes>
-              
+              <Route exac path="/login"    element={<PublicRoute><Login /></PublicRoute>}/>
+
+              <Route exac path="/"       element={<PrivateRoute><Dashboard /></PrivateRoute>}/>
+              <Route exac path="/account" element={<PrivateRoute><Account /></PrivateRoute>}/>
             </Routes>
           </BrowserRouter>
         </MessageProvider>        
