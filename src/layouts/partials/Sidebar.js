@@ -24,6 +24,8 @@ const Sidebar = () => {
       <div className="nav">
         <SideMenuItem label="Dashboard" to="/" icon={<FontAwesomeIcon icon={ faAtom }/>} />
         <SideMenuItem label="Account" to="/account" icon={<FontAwesomeIcon icon={ faUser }/>} />
+        <SideMenuItem label="Servizi" to="/services" icon={<FontAwesomeIcon icon={ faStore }/>} />
+        <SideMenuItem label="Impostazioni" to="/settings" icon={<FontAwesomeIcon icon={ faCogs }/>} />
       
       </div>
     </div>

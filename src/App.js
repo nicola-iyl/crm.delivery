@@ -9,6 +9,8 @@ import PublicRoute from "./router/PublicRoute";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import Account from "./pages/Account";
+import Services from "./pages/Services";
+import Settings from "./pages/Settings";
 
 function App() {
   
@@ -22,6 +24,8 @@ function App() {
 
               <Route exac path="/"       element={<PrivateRoute><Dashboard /></PrivateRoute>}/>
               <Route exac path="/account" element={<PrivateRoute><Account /></PrivateRoute>}/>
+              <Route exac path="/services" element={<PrivateRoute><Services /></PrivateRoute>}/>
+              <Route exac path="/settings" element={<PrivateRoute><Settings /></PrivateRoute>}/>
             </Routes>
           </BrowserRouter>
         </MessageProvider>        
