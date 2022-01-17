@@ -4,6 +4,7 @@ import MasterLayout from "../../layouts/MasterLayout";
 import StandardPage from "../../layouts/StandardPage";
 import Loader from "../../components/Loader";
 import { API_GetActiveServices, API_GetSettings } from "../../api/ShopService";
+import ServiceItem from "./partials/ServiceItem";
 
 const SettingsList = () => {
 
@@ -38,7 +39,7 @@ const SettingsList = () => {
     <MasterLayout>
       { loading ? <Loader /> : null }
       <StandardPage title="Configurazioni Funzionalità"> 
-        { services.map( ( service, i) => { return ( <div>{service.label}</div>) } ) }
+        { services.map( ( service, i) => { return ( <ServiceItem key={ service.id } service={ service } />)} ) }
       </StandardPage>
     </MasterLayout>
   );

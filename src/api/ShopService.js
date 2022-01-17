@@ -30,5 +30,12 @@ export async function API_GetSettings( callback ){
     .catch( ( error ) => { sendResponse( false, callback, error ) } );
 }
 
+export async function API_GetSettingsByType( id, callback ){
+  const config = { headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },};
+  await _API.get( 'settings_by_type/'+id , config )
+    .then( ( response ) => { sendResponse( response, callback, null ) } )
+    .catch( ( error ) => { sendResponse( false, callback, error ) } );
+}
+
 
 
